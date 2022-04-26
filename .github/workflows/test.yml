@@ -21,7 +21,7 @@ jobs:
     steps:
     - name: Echo version
       run: |
-        if [ ${{ github.event.inputs.gecko_version }} != "gxx" ]; then
+        if [ ${{ github.event.inputs.gecko_version }} != gxx ]; then
           CHROME_VERS=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
         else
           CHROME_VERS=${{ github.event.inputs.gecko_version }}
